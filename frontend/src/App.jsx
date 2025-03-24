@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { assets } from './assets/assets'
 import Navbar from './components/navbar/navbar'
+import Home from './pages/Home/Home'
 const App = () => {
   return (
     <div className='app'>
      <Navbar/>
-     
+     <Home/>
+    
     </div>
   )
 }
