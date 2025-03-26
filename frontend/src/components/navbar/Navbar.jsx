@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
- const Navbar = () => {
+ const Navbar = ({setShowLogin}) => {
         const [menu, SetMenu] = useState('Home');
   
   return (
@@ -10,9 +10,9 @@ import { assets } from '../../assets/assets'
       <img src={assets.logo} alt="" className='logo' />
       <ul className='navbar-menu'>
         <li onClick={()=>SetMenu("Home")} className={menu === "Home"?"active":""}>Home</li>
-        <li onClick={()=>SetMenu("Menu")} className={menu === "Menu"?"active":""}>Menu</li>
-        <li onClick={()=>SetMenu("Mobile-App")} className={menu === "Mobile-App"?"active":""}>Mobile-App</li>
-        <li onClick={()=>SetMenu("Contact Us")} className={menu === "Contact Us"?"active":""}>Contact Us</li>
+        <a href='#explore-menu' onClick={()=>SetMenu("Menu")} className={menu === "Menu"?"active":""}>Menu</a>
+        <a href='#app-download' onClick={()=>SetMenu("Mobile-App")} className={menu === "Mobile-App"?"active":""}>Mobile-App</a>
+        <a href='#footer' onClick={()=>SetMenu("Contact Us")} className={menu === "Contact Us"?"active":""}>Contact Us</a>
 
       </ul>
 
@@ -23,7 +23,7 @@ import { assets } from '../../assets/assets'
            <div className='dot'></div>
 
         </div>
-        <button className='button'>SignIn</button>
+        <button onClick={()=>setShowLogin(true)} className='button'>SignIn</button>
       </div>
     </div>
   )
