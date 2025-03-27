@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
+import {Link} from 'react-router-dom'
  const Navbar = ({setShowLogin}) => {
         const [menu, SetMenu] = useState('Home');
   
@@ -17,9 +18,9 @@ import { assets } from '../../assets/assets'
       </ul>
 
       <div className='navbar-right'>
-        <img src={assets.search_icon} alt="" className='search-icon'/>
+     <img src={assets.search_icon} alt="" className='search-icon'/>
         <div className='navbar-search-icon'>
-           <img src={assets.basket_icon} alt="" />
+          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link> 
            <div className='dot'></div>
 
         </div>

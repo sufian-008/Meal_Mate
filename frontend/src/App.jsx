@@ -4,9 +4,9 @@ import Navbar from './components/navbar/navbar';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
-
+import Cart from './pages/cart/Cart';
 const App = () => {
-   const  [ShowLogin, setShowLogin] = useState(false)
+   const  [ShowLogin, setShowLogin] = useState(false);
 
   return (
     <>
@@ -15,6 +15,7 @@ const App = () => {
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </div>
       <Footer />
