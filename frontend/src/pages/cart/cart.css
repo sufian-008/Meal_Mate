@@ -86,3 +86,12 @@
     outline: none;
     padding-left: 10px;
 }
+
+.cart-promocode-input button{
+    width: max(10vw, 150px);
+    padding: 12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
