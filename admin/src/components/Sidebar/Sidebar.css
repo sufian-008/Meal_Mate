@@ -25,7 +25,7 @@
     cursor: pointer;
 }
 
-.sideebar-option.active{
+.sidebar-option.active{
     background-color: #fff0ed;
     border-color: tomato;
 }
