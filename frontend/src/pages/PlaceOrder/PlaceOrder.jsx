@@ -55,4 +55,4 @@ const PlaceOrder = () =>{
       </form>
     )
 }
-export default PlaceOrder
+export default PlaceOrder;

@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <div className='header'>
         <div className='header-contents'>
-            <h2>Order your favourite food here</h2>
-            <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the </p>
+            <h2>Meals Made Easy for the Bachelor Life!</h2>
+            <p>Discover affordable, delicious meals tailored for your busy lifestyle. Join MealMate today! </p>
             <button>View Menu</button>
         </div>
     </div>

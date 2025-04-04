@@ -1,7 +1,7 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
+    background: url('https://www.cypressgreen.in/blog/wp-content/uploads/2021/03/food-2048x1366.jpg') no-repeat;
     position: relative;
 
 }
@@ -35,10 +35,10 @@
 
 .header-contents button{
     border: non;
-    color: #747474;
+    color: white;
     font-weight: 500;
     padding: 1vw 2.3vw;
-    background-color: white;
+    background-color: tomato;
     font-size: max(1vw,13px);
     border-radius: 50px;
 }

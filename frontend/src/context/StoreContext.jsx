@@ -5,7 +5,10 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState({});
-  
+    
+     const url ="http://localhost:4000"
+     const [token, setToken] = useState("");
+    
 
     // Add to cart 
     const addToCart = (itemId) => {
@@ -30,7 +33,7 @@ const StoreContextProvider = ({ children }) => {
         for(const item in cartItems){
           if(cartItems[item]>0){
             let itemInfo = food_list.find((product)=>product._id === item);
-            totalAmount += itemInfo.price* cartItems[item];
+            totalAmount += itemInfo.price*cartItems[item];
           }
 
             
@@ -48,7 +51,10 @@ const StoreContextProvider = ({ children }) => {
         setCartItems,
         addToCart,
         removeFromCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        url,
+        token,
+        setToken
     };
 
     return (
