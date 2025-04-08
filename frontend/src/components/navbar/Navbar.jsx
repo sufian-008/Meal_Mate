@@ -1,12 +1,13 @@
 import React, { useState, useContext } from 'react';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, SetMenu] = useState('Home');
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
+  const navigate = useNavigate();
 
   const logout =()=>{
     localStorage.removeItem("token");
@@ -20,10 +21,10 @@ const Navbar = ({ setShowLogin }) => {
     <div className='navbar'>
       <img src={assets.logo} alt="Logo" className='logo' />
       <ul className='navbar-menu'>
-        <li onClick={() => SetMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</li>
-        <Link to='#explore-menu' onClick={() => SetMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</Link>
-        <Link to='#seller' onClick={() => SetMenu("Seller")} className={menu === "Seller" ? "active" : ""}>Seller</Link>
-        <Link to='#footer' onClick={() => SetMenu("Contact Us")} className={menu === "Contact Us" ? "active" : ""}>Contact Us</Link>
+        <Link to='/' onClick={() => SetMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</Link>
+        <a href="#explore-menu" onClick={() => SetMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</a>
+        <a href="#seller" onClick={() => SetMenu("Seller")} className={menu === "Seller" ? "active" : ""}>Seller</a>
+        <a href="#footer" onClick={() => SetMenu("Contact Us")} className={menu === "Contact Us" ? "active" : ""}>Contact Us</a>
       </ul>
 
       <div className='navbar-right'>
