@@ -12,11 +12,16 @@ const StoreContextProvider = ({ children }) => {
     
 
     // Add to cart 
-    const addToCart = (itemId) => {
+    const addToCart = async (itemId) => {
         setCartItems((prev) => ({
             ...prev,
             [itemId]: (prev[itemId] || 0) + 1, // If not in cart, set to 1
+
         }));
+
+        if(token){
+            await axios.post(url+"/api/cart/add",{itemId},{headers:{token}})
+        }
     };
 
     const removeFromCart = (itemId) => {
