@@ -24,7 +24,7 @@ const StoreContextProvider = ({ children }) => {
         }
     };
 
-    const removeFromCart = (itemId) => {
+    const removeFromCart = async (itemId) => {
         setCartItems((prev) => {
             if (!prev[itemId]) return prev; // If item is not in cart, do nothing
             const updatedCart = { ...prev };
@@ -32,24 +32,32 @@ const StoreContextProvider = ({ children }) => {
             if (updatedCart[itemId] <= 0) delete updatedCart[itemId]; // Remove item if count is 0
             return updatedCart;
         });
+
+        if (token){
+             await axios.post(url+"/api/cart/remove",{itemId},{header:{token}})
+        }
     };
 
-    const getTotalCartAmount = () =>{
-        let totalAmount = 0;
-        for(const item in cartItems){
-          if(cartItems[item]>0){
-            let itemInfo = food_list.find((product)=>product._id === item);
-            totalAmount += itemInfo.price*cartItems[item];
+    const getTotalCartAmount = () => {
+        let total = 0;
+        for (const itemId in cartItems) {
+          if (cartItems[itemId] > 0) {
+            const item = food_list.find(product => product._id === itemId);
+            if (item) {
+              total += item.price * cartItems[itemId];
+            }
           }
-
-            
         }
-        return totalAmount;
-    }
-
+        return total;
+      };
     const fetchFoodList = async ()=>{
         const response =await axios.get(url+"/api/food/list");
         setFoodList(response.data.data);
+    }
+
+    const loadCartData = async (token) =>{
+        const response = await axios.post(url+"/api/cart/get",{},{headers:{token}});
+        setCartItems(response.data.cartData);
     }
       
     useEffect(()=>{
@@ -58,6 +66,7 @@ const StoreContextProvider = ({ children }) => {
             await fetchFoodList();
             if(localStorage.getItem("token")){
                 setToken(localStorage.getItem("token"));
+                await loadCartData(localStorage.getItem("token"));
              }
          }
          loadData();
