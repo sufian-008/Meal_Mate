@@ -23,9 +23,22 @@ const PlaceOrder = () => {
         ...data,[name]:value
     }))
   }
+
+  const placeOrder = async (event) =>{
+  
+    event.preventDefault();
+    let orderItems = [];
+    food_list.map((item) =>{
+      if(cartItems[item._id] > 0){
+        let itemInfo = item;
+        itemInfo["quantity"]= cartItems[items]
+      }
+    })
+  }
+ 
        
   return (
-    <form className="place-order">
+    <form onSubmit={placeOrder} className="place-order">
       <div className="place-order-left">
         <p className="title">Delivery Information</p>
         <div className="multi-fields">
@@ -36,15 +49,15 @@ const PlaceOrder = () => {
         <input name='street' onChange={onChangeHandler} value={data.street} type="text" placeholder="Street" />
 
         <div className="multi-fields">
-          <input type="text" placeholder="City" />
-          <input type="text" placeholder="States" />
+          <input type="text" placeholder="City" name="city" onChange={onChangeHandler} value={data.city} />
+          <input type="text" placeholder="States" name="state" onChange={onChangeHandler} value={data.state} />
         </div>
 
         <div className="multi-fields">
-          <input type="text" placeholder="Zip code" />
-          <input type="text" placeholder="Country" />
+          <input type="text" placeholder="Zip code" name="zipcode" onChange={onChangeHandler} value={data.zipcode} />
+          <input type="text" placeholder="Country" name="country" onChange={onChangeHandler} value={data.country}/>
         </div>
-        <input type="text" placeholder="Phone" />
+        <input type="text" placeholder="Phone" name="phone" onChange={onChangeHandler} value={data.phone}/>
       </div>
 
       <div className="place-order-right">
