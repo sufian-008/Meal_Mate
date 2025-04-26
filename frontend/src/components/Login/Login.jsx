@@ -40,7 +40,7 @@ const Login = ({setShowLogin}) => {
 
          }
          else {
-             alert(response.data.messeage);
+             alert(response.data.message);
             
          }
        }

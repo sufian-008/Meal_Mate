@@ -23,7 +23,7 @@ const Navbar = ({ setShowLogin }) => {
       <ul className='navbar-menu'>
         <Link to='/' onClick={() => SetMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</Link>
         <a href="#explore-menu" onClick={() => SetMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</a>
-        <a href="#seller" onClick={() => SetMenu("Seller")} className={menu === "Seller" ? "active" : ""}>Seller</a>
+        <a href="http://localhost:5174/" onClick={() => SetMenu("Seller")} className={menu === "Seller" ? "active" : ""}>Seller</a>
         <a href="#footer" onClick={() => SetMenu("Contact Us")} className={menu === "Contact Us" ? "active" : ""}>Contact Us</a>
       </ul>
 
