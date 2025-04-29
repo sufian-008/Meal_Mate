@@ -59,7 +59,7 @@ const PlaceOrder = () => {
 
     try {
       const response = await axios.post(
-        `${url}/api/order/place`,
+        `$http://localhost:4000/api/order/place`,
         orderData,
         { headers: { token } }
       );

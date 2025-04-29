@@ -26,7 +26,7 @@ const Cart = () => {
           return (
             <div key={item._id}>
               <div className="cart-items-title cart-items-item">
-                <img src={item.image} alt={item.name} />
+                <img src={`http://localhost:4000/image/`+item.image} alt={item.name} />
                 <p>{item.name}</p>
                 <p>${item.price}</p>
                 <p>{cartItems[item._id]}</p>
@@ -57,7 +57,7 @@ const Cart = () => {
               <b>Total</b>
               <b>${getTotalCartAmount() + 6}</b>
             </div>
-            {/* ✅ Button to navigate to /order */}
+            
             <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
           </div>
 
