@@ -114,7 +114,7 @@ const PlaceOrder = () => {
               <b>Total</b>
               <b>৳{getTotalCartAmount() + 6}</b>
             </div>
-            <button type="submit">PROCEED TO PAYMENT</button>
+            <button  ><a href="https://buy.stripe.com/test_6oU9ANbJq3GP3N74ZEeAg00" class="proceed-btn">PROCEED TO PAYMENT</a></button>
           </div>
         </div>
       </div>
