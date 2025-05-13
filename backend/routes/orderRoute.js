@@ -9,4 +9,4 @@ orderRouter.post("/place", authMiddleware,placeOrder);
 orderRouter.post("/verify", verifyOrder)
 
 
-export default orderRouter;
+export default orderRouter; 
