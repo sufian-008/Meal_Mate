@@ -9,7 +9,7 @@ const StoreContextProvider = ({ children }) => {
   const [food_list, setFoodList] = useState([]);
   const [user, setUser] = useState(null); 
 
-  const url = "http://localhost:4000";
+  const url = "https://meal-mate-lmh3.onrender.com";
 
   // Add item to cart
   const addToCart = async (itemId) => {
