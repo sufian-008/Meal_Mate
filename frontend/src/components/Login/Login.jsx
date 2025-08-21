@@ -7,7 +7,7 @@ import axios from "axios";
 const Login = ({ setShowLogin }) => {
   const { url, setToken } = useContext(StoreContext);
 
-  const [currState, setCurrState] = useState("login"); // ✅ use lowercase only
+  const [currState, setCurrState] = useState("login"); 
   const [data, setData] = useState({
     name: "",
     email: "",
