@@ -94,7 +94,8 @@ const Login = ({ setShowLogin }) => {
 
         <div className="login-popup-condition">
           <input type="checkbox" required />
-          <p>By continuing, I agree to the terms of use & privacy policy.</p>
+          <p>Please provide password at least 8 character</p>
+           <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
 
         {currState === "login" ? (
