@@ -14,8 +14,10 @@ const port = 4000
 
 //middleware
 app.use(express.json())
-app.use(cors())
-
+app.use(cors({
+  origin: "https://meal-mate-1-1cn1.onrender.com", 
+  credentials: true
+}));
 
 //db connection 
  connectDB();
