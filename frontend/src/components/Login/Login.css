@@ -74,3 +74,19 @@
     font-weight: 500;
     cursor: pointer;
 }
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: tomato;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-popup-container button:hover {
+    background-color: #ff6347; 
+    transform: scale(1.03); 
+}
+
