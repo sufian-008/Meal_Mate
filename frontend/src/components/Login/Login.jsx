@@ -3,6 +3,8 @@ import "./Login.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = ({ setShowLogin }) => {
   const { url, setToken } = useContext(StoreContext);
@@ -35,13 +37,14 @@ const Login = ({ setShowLogin }) => {
       if (response.data.success) {
         setToken(response.data.token);
         localStorage.setItem("token", response.data.token);
+        toast.success("Logged in successfully!");
         setShowLogin(false);
       } else {
-        alert(response.data.message);
+        toast.error(response.data.message);
       }
     } catch (error) {
       console.error(error);
-      alert("Something went wrong! Please try again.");
+      toast.error("Something went wrong! Please try again.");
     }
   };
 
@@ -88,14 +91,14 @@ const Login = ({ setShowLogin }) => {
           />
         </div>
 
-        <button type="submit">
+        <button type="submit" className="login-btn">
           {currState === "signup" ? "Create Account" : "Login"}
         </button>
 
         <div className="login-popup-condition">
           <input type="checkbox" required />
-          <p>Please provide password at least 8 character</p>
-           <p>By continuing, I agree to the terms of use & privacy policy.</p>
+          <p>Please provide password at least 8 characters</p>
+          <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
 
         {currState === "login" ? (
@@ -109,7 +112,9 @@ const Login = ({ setShowLogin }) => {
             <span onClick={() => setCurrState("login")}>Login Here</span>
           </p>
         )}
+
       </form>
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };
