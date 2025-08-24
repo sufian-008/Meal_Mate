@@ -63,7 +63,7 @@ const Navbar = ({ setShowLogin }) => {
       <ul className={`navbar-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <Link to='/' onClick={() => setMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</Link>
         <a href="#explore-menu" onClick={() => setMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</a>
-        <a href="http://localhost:5174/" onClick={handleSellerClick} className={menu === "Seller" ? "active" : ""}>Seller</a>
+        <a href="https://meal-mate-admin-6i0y.onrender.com" onClick={handleSellerClick} className={menu === "Seller" ? "active" : ""}>Seller</a>
         <a href="#footer" onClick={() => setMenu("Contact Us")} className={menu === "Contact Us" ? "active" : ""}>Contact Us</a>
       </ul>
 
