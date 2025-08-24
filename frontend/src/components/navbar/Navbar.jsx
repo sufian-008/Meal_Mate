@@ -25,7 +25,7 @@ const Navbar = ({ setShowLogin }) => {
       e.preventDefault();
       toast.error("Please login first");
     } else {
-      window.location.href = "http://localhost:5174/";
+      window.location.href = "https://meal-mate-admin-6i0y.onrender.com";
     }
   };
 
