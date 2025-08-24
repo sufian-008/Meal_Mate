@@ -22,8 +22,9 @@ const Navbar = ({ setShowLogin }) => {
 
   const handleSellerClick = (e) => {
     if (!token) {
-      e.preventDefault();
       toast.error("Please login first");
+      e.preventDefault();
+     
     } else {
       window.location.href = "https://meal-mate-admin-6i0y.onrender.com";
     }
