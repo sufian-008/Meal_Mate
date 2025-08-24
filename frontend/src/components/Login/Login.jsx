@@ -86,7 +86,7 @@ const Login = ({ setShowLogin }) => {
             onChange={onChangeHandler}
             value={data.password}
             type="password"
-            placeholder="Enter password at 8 character"
+            placeholder="Enter Your password "
             required
           />
         </div>
@@ -97,8 +97,8 @@ const Login = ({ setShowLogin }) => {
 
         <div className="login-popup-condition">
           <input type="checkbox" required />
-          <p>Please provide password at least 8 characters</p>
           <p>By continuing, I agree to the terms of use & privacy policy.</p>
+          <p>Please provide password at least 8 characters</p>
         </div>
 
         {currState === "login" ? (
