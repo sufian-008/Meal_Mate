@@ -77,7 +77,7 @@ const Login = ({ setShowLogin }) => {
             onChange={onChangeHandler}
             value={data.email}
             type="email"
-            placeholder="Your Email"
+            placeholder=" Enter Your Email"
             required
           />
 
@@ -86,7 +86,7 @@ const Login = ({ setShowLogin }) => {
             onChange={onChangeHandler}
             value={data.password}
             type="password"
-            placeholder="Your Password"
+            placeholder="Enter password at 8 character"
             required
           />
         </div>
