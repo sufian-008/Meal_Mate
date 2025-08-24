@@ -23,7 +23,7 @@ const Navbar = ({ setShowLogin }) => {
   const handleSellerClick = (e) => {
     if (!token) {
       e.preventDefault();
-      alert("Please login to your seller account!");
+      toast.error("Please login first");
     } else {
       window.location.href = "http://localhost:5174/";
     }
