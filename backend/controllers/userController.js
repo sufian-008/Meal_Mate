@@ -15,7 +15,7 @@ const createToken = (id) => {
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
-  console.log("👉 Login request received:", req.body);
+  console.log(" Login request received:", req.body);
 
   try {
     const user = await userModel.findOne({ email });
@@ -42,7 +42,7 @@ const loginUser = async (req, res) => {
       user: { id: user._id, name: user.name, email: user.email },
     });
   } catch (error) {
-    console.error("❌ Login error:", error.message);
+    console.error(" Login error:", error.message);
     res.status(500).json({ success: false, message: "Server error occurred" });
   }
 };
@@ -51,7 +51,7 @@ const loginUser = async (req, res) => {
 const registerUser = async (req, res) => {
   const { name, password, email } = req.body;
 
-  console.log("👉 Register request received:", req.body);
+  console.log(" Register request received:", req.body);
 
   try {
     const exists = await userModel.findOne({ email });
@@ -95,7 +95,7 @@ const registerUser = async (req, res) => {
       user: { id: user._id, name: user.name, email: user.email },
     });
   } catch (error) {
-    console.error("❌ Register error:", error.message);
+    console.error(" Register error:", error.message);
     res.status(500).json({ success: false, message: "Server error occurred" });
   }
 };
