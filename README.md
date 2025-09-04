@@ -23,11 +23,14 @@ MealMaate is a full-stack food ordering web application that allows users to bro
 
 ### 3. Design
 # UI/UX
-<img width="475" height="775" alt="image" src="https://github.com/user-attachments/assets/61f0ed8c-50ff-4c12-ad43-83a747b938f5" />
-# High Level and Low Level Design
-<img width="1700" height="2200" alt="Team-05(zillionAL)CLP_01 drawio" src="https://github.com/user-attachments/assets/1843fbf0-e943-4b6b-aa47-efe6a9fec176" />
+<img width="475" height="800" alt="image" src="https://github.com/user-attachments/assets/61f0ed8c-50ff-4c12-ad43-83a747b938f5" />
+
+# High Level and Low Level Design (This Was my plan but I did not implement all feature like it)
+<img width="599" height="800 alt="image" src="https://github.com/user-attachments/assets/79437fb7-dd49-477c-b9a5-f59c544dc4f3" />
+
 # Database Design
- <img width="877" height="608" alt="image" src="https://github.com/user-attachments/assets/ca2e6a18-3fb8-4c2e-a986-72d43f228b59" />
+ <img width="877" height="800" alt="image" src="https://github.com/user-attachments/assets/ca2e6a18-3fb8-4c2e-a986-72d43f228b59" />
+ 
  # System Design(It's not completed)
  <img width="724" height="613" alt="image" src="https://github.com/user-attachments/assets/85836cac-552e-4101-b225-4b559dae3e2d" />
 
