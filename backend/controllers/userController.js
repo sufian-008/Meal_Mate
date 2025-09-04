@@ -100,4 +100,24 @@ const registerUser = async (req, res) => {
   }
 };
 
-export { loginUser, registerUser };
+// ================= USER INFO =================
+const getUserInfo = async (req, res) => {
+  const token = req.headers.token;
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await userModel.findById(decoded.id).select("-password");
+
+    if (!user) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
+    res.json({ user });
+  } catch (error) {
+    console.error("User info error:", error.message);
+    res.status(401).json({ success: false, message: "Invalid token" });
+  }
+};
+
+export { loginUser, registerUser, getUserInfo };
+
