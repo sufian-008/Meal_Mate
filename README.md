@@ -15,7 +15,7 @@ MealMaate is a full-stack food ordering web application that allows users to bro
 ### Backend
 - 🚀 Node.js + Express.js
 - 🗃️ MongoDB (via Mongoose)
-- 🔐 JWT Authentication (optional)
+- 🔐 JWT Authentication 
 - 🌐 CORS, dotenv
 
 ---
